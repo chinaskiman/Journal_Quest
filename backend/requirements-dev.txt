@@ -1,0 +1,10 @@
+# Trade Quest V2 - test tooling (not required to run the application).
+#
+# Installed automatically by backend/requirements.txt via `-r requirements-dev.txt`,
+# so `pip install -r requirements.txt` still yields a complete, testable environment
+# and the existing setup_tradequest.bat keeps working unchanged.
+#
+# pytest : both suites (backend/tests = v1, backend/tests_v2 = v2)
+# httpx  : required by fastapi.testclient.TestClient, used by both conftest files
+pytest>=8.2
+httpx>=0.27

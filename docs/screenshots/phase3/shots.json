@@ -1,0 +1,20 @@
+{
+  "base": "http://127.0.0.1:8011",
+  "capturedAt": "2026-10-01T16:08:33.573Z",
+  "files": [
+    "01-quest-hub.png",
+    "02-trade-journal.png",
+    "03-trade-detail.png",
+    "04-quick-capture.png",
+    "05-quick-review.png",
+    "06-deep-review.png",
+    "07-emotional-journal.png",
+    "08-daily-review.png",
+    "09-weekly-review.png",
+    "10-quest-center.png",
+    "11-achievements.png",
+    "12-settings.png",
+    "13-settings-options.png",
+    "14-quest-claim-toast.png"
+  ]
+}

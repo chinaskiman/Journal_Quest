@@ -1,0 +1,144 @@
+/* Base layer: reset + typography + form controls. */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--bg-void);
+  color: var(--text-1);
+  font-family: var(--font-body);
+  font-size: 14.5px;
+  line-height: 1.55;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  color: var(--text-1);
+  margin: 0 0 0.4em;
+  letter-spacing: 0.01em;
+}
+
+h1 {
+  font-size: 1.45rem;
+}
+
+h2 {
+  font-size: 1.15rem;
+}
+
+h3 {
+  font-size: 1rem;
+}
+
+p {
+  margin: 0 0 0.75em;
+}
+
+a {
+  color: var(--electric);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--cyan);
+}
+
+code,
+.mono {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+}
+
+.num {
+  font-variant-numeric: tabular-nums;
+}
+
+/* --- form controls ---------------------------------------------------------- */
+label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-2);
+  margin-bottom: 0.3em;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  background: var(--bg-void);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  color: var(--text-1);
+  font: inherit;
+  padding: 0.5em 0.7em;
+  transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+button:focus-visible,
+a:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid var(--cyan);
+  outline-offset: 2px;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: var(--text-3);
+}
+
+input:disabled,
+select:disabled,
+textarea:disabled,
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hint {
+  font-size: 0.8rem;
+  color: var(--text-3);
+  margin-top: 0.25em;
+}
+
+.req {
+  color: var(--gold);
+}
+
+/* Reduced motion: no movement anywhere, opacity transitions only. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

@@ -1,0 +1,48 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+backend/.venv/
+
+# Node / frontend
+node_modules/
+frontend_v2/dist/
+*.tsbuildinfo
+
+# Build artifacts (regenerate with PyInstaller / Inno Setup)
+.buildvenv/
+build/
+build-desktop/
+dist/
+dist-desktop/
+dist-installer/
+
+# Data - NEVER commit databases, backups, or exports.
+# NB: a pattern like `data/*.db` cannot match into subdirectories,
+# so the recursive forms below are required as well.
+data/*.db
+data/*.db-wal
+data/*.db-shm
+data/*.xlsx
+data/*.log
+data/backups/
+data/**/*.db
+data/**/*.db-wal
+data/**/*.db-shm
+data/**/*.xlsx
+
+# Personal spreadsheets anywhere in the tree (e.g. the strategy workbook)
+*.xlsx
+*.csv
+
+# Env & OS / editor
+.env
+.env.local
+*.env
+!.env.example
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini

@@ -1,0 +1,27 @@
+# Trade Quest V2 - runtime dependencies (v2 app only: backend/app2).
+#
+# Audit basis (2026-10-02, verified by import-blocking probe):
+#   fastapi, uvicorn, sqlalchemy, pydantic  -> imported by app2/*
+#   python-multipart                         -> NOT imported by app2; only
+#                                              backend/app/routers/io.py (v1
+#                                              UploadFile). Starlette imports it
+#                                              in a try/except and degrades to
+#                                              None, so v2 runs fine without it.
+#   openpyxl                                 -> NOT imported by app2; only
+#                                              backend/app/exporter.py and
+#                                              importer.py (v1 Excel I/O).
+#
+# See requirements-dev.txt for the test tooling pulled in below.
+fastapi>=0.115
+uvicorn[standard]>=0.30
+sqlalchemy>=2.0.40
+pydantic>=2.9
+
+# --- v1 legacy runtime (backend/app: Excel import/export + file upload) ---
+# Kept here so installing this one file still yields a working project.
+openpyxl>=3.1.5
+python-multipart>=0.0.9
+
+# Test tooling is split into its own file for clarity, but is still installed by
+# this file so `pip install -r requirements.txt` remains sufficient.
+-r requirements-dev.txt

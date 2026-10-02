@@ -1,0 +1,35 @@
+/* Trade Quest v2 design tokens (approved palette - PHASE1_BLUEPRINT §E). */
+:root {
+  --bg-void: #070b14;
+  --bg-panel: #0d1420;
+  --bg-elevated: #131c2c;
+  --border-subtle: #1e2a3f;
+  --border-strong: #2a3a56;
+  --gold: #d4af6a;
+  --gold-dim: #a98b5f;
+  --cyan: #38e1f0;
+  --electric: #4d9fff;
+  --text-1: #e8edf5;
+  --text-2: #93a1b8;
+  --text-3: #5c6b84;
+  --success: #3ddc97;
+  --warn: #ffc757;
+  --danger: #ff6b7a;
+  --radius: 12px;
+  --radius-sm: 8px;
+  --radius-lg: 16px;
+  --shadow-1: 0 2px 10px rgba(0, 0, 0, 0.35);
+  --shadow-2: 0 8px 28px rgba(0, 0, 0, 0.5);
+  --font-body: 'Segoe UI Variable Text', 'Segoe UI', Inter, system-ui, sans-serif;
+  --font-display: 'Segoe UI Variable Display', 'Segoe UI', system-ui, sans-serif;
+  --font-mono: 'Cascadia Code', Consolas, 'SF Mono', monospace;
+  --sidebar-w: 240px;
+  --sidebar-w-collapsed: 64px;
+  --transition: 180ms ease-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  :root {
+    --transition: 0ms;
+  }
+}
